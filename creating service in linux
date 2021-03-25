@@ -1,0 +1,17 @@
+Below sample code will helpful to create service in linux.
+
+creating jenkins service in linux
+
+cd /etc/systemd/system/
+vi jenkins.service & save the below code in jenkins.service file.
+
+jenkins.service
+[unit]
+Description=Jenkins Daemon
+
+[service]
+ExecStart=/usr/bin/java -jar /home/lilaram/jenkins.war
+User=root
+
+[Install]
+wantedBy=multi-user.target

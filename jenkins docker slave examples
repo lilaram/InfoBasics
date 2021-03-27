@@ -17,3 +17,29 @@ pipeline {
     }
           
                 
+---------------------------------------------------------------
+Adding one more examples
+
+pipeline{
+  agent {
+     docker {
+         image 'ubuntu:latest'
+        }
+   }
+ 
+stages{
+    stage('build') {
+       steps{
+          sh 'cat /etc/lstb-release'
+          }
+       }
+     stage('Deploy') {
+       steps {
+         sh 'cat /etc/lsb-release'
+         }
+      }
+  }
+}
+
+ 
+ 

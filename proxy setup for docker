@@ -1,0 +1,14 @@
+
+
+sudo mkdir -p /etc/systemd/system/docker.service.d
+
+vim /etc/systemd/system/docker.service.d/http-proxy.conf
+
+[service]
+Enviroment="HTTP_PROXY=http://mycompany.proxy.com:9898"
+Enviroment="HTTPS_PROXY=https://mycompany.proxy.com:9898"
+
+systemctl daemon-reload
+systemctl restart docker
+
+

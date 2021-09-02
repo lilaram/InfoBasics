@@ -1,0 +1,27 @@
+crontab -l -u user | cat - filename | crontab -u user -
+
+
+sshpass -p xxx ssh -to StrictHostKeyChecking=no root@xxxxx 'ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa'
+
+
+ ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
+ 
+ sshpass -p xxxx ssh -to StrictHostKeyChecking=no root@xxxx "ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa"
+ 
+  sshpass -p root ssh -to StrictHostKeyChecking=no root@xxxx 'ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa'
+  
+  
+  sshpass -p 'root' ssh -to StrictHostKeyChecking=no root@xxxx 'uptime'
+  sshpass -p 'root' scp cronentry root@xxxxx:~/filename
+   
+  sshpass -p root ssh-copy-id -o StrictHostKeyChecking=no root@xxxxx
+ 
+ 
+ sshpass -p xxxx ssh-copy-id -o StrictHostKeyChecking=no root@$x.x.x.x
+ 
+ sshpass -p 'root' ssh -to StrictHostKeyChecking=no root@${ip} 'uptime'
+sshpass -p 'root' scp hosts root@${ip}:/etc/hosts
+sshpass -p 'root' ssh -to StrictHostKeyChecking=no root@${ip} 'ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa'
+sshpass -p 'root' scp cronentry root@${ip}:~/cronentry
+
+sshpass -p 'root' ssh -to StrictHostKeyChecking=no root@${ip} "bash -s" < ./run_on_all_node.sh arguments

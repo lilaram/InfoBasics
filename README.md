@@ -8,4 +8,6 @@ but the build get trigger as per the mentioned time.
 
 Poll SCM--> it is same as build periodically but job gets trigger when their is any changes in SCM. If the changes is as it is then the job is not getting trigger.
 
+java -jar jenkins-cli.jar -auth usr:pass -s http://localhost:8080/   build "job_name_full_path"  -p key=value -p key=value -p key=value  -s
+
 
